@@ -19,7 +19,7 @@ class MarkupBabelProcessor
     var $Cache = '';
     var $URI = '';
 
-    function MarkupBabelProcessor($content, $path, $mode, $uri)
+    function __construct($content, $path, $mode, $uri)
     {
         global $wgUploadDirectory;
 

@@ -26,7 +26,7 @@ $wgExtensionFunctions[] = 'MarkupBabelRegister';
 $wgHooks['ArticleViewHeader'][] = 'MarkupBabel::AutoHighlight';
 $wgHooks['ArticlePurge'][] = 'MarkupBabel::ArticlePurge';
 $wgHooks['ParserFirstCallInit'][] = 'MarkupBabel::register';
-$wgAutoloadClasses['GeSHi'] = dirname(dirname(__FILE__)).'/SyntaxHighlight_GeSHi/geshi/geshi.php';
+$wgAutoloadClasses['GeSHi'] = dirname(dirname(__FILE__)).'/MarkupBabel/geshi/geshi.php';
 $wgAutoloadClasses['MarkupBabelProcessor'] = dirname(__FILE__).'/MarkupBabelProcessor.php';
 
 function MarkupBabelRegister()

@@ -557,6 +557,7 @@ EOT;
 %\\usepackage{amssymb,amsmath,amscd,concmath}
 \\usepackage{amssymb,amsmath,amscd}
 \\usepackage{color}
+\\usepackage{tikz}
 \\pagestyle{empty}
 \\begin{document}
 {$this->Content}

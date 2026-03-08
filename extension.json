@@ -1,0 +1,23 @@
+{
+    "name": "MarkupBabel",
+    "version": "2.0.0",
+    "author": [
+        "Stas Fomin",
+        "AI Update"
+    ],
+    "description": "Renders various markup languages (LaTeX, Graphviz, Gnuplot, etc) into images, and provides GeSHi syntax highlighting.",
+    "license-name": "GPL-2.0-or-later",
+    "type": "parserhook",
+    "requires": {
+        "MediaWiki": ">= 1.39.0"
+    },
+    "AutoloadNamespaces": {
+        "MediaWiki\\Extension\\MarkupBabel\\": "includes/"
+    },
+    "Hooks": {
+        "ParserFirstCallInit": "MediaWiki\\Extension\\MarkupBabel\\Hooks::onParserFirstCallInit",
+        "ArticleViewHeader": "MediaWiki\\Extension\\MarkupBabel\\Hooks::onArticleViewHeader",
+        "ArticlePurge": "MediaWiki\\Extension\\MarkupBabel\\Hooks::onArticlePurge"
+    },
+    "manifest_version": 2
+}

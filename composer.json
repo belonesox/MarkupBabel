@@ -1,0 +1,7 @@
+{
+    "name": "dmwiki/markup-babel",
+    "description": "Dependencies for MarkupBabel extension",
+    "require": {
+        "geshi/geshi": "^1.0"
+    }
+}

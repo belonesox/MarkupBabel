@@ -6,6 +6,7 @@ use MediaWiki\MediaWikiServices;
 use Parser;
 use ParserOptions;
 use GeSHi;
+use RequestContext;
 
 class Hooks {
     public static function onParserFirstCallInit( Parser $parser ) {
@@ -118,7 +119,7 @@ class Hooks {
     public static function onArticlePurge( \MediaWiki\Page\WikiPage $page ) {
         $services = MediaWikiServices::getInstance();
         $parser = $services->getParser();
-        $user = $page->getContext()->getUser();
+        $user = RequestContext::getMain()->getUser();
         $content = $page->getContent();
 
         if ( $content instanceof \MediaWiki\Content\TextContent ) {

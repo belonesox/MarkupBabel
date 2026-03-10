@@ -115,14 +115,14 @@ class Hooks {
         return true;
     }
 
-    public static function onArticlePurge( Article $article ) {
+    public static function onArticlePurge( \MediaWiki\Page\WikiPage $page ) {
         $services = MediaWikiServices::getInstance();
         $parser = $services->getParser();
-        $user = $article->getContext()->getUser();
-        $content = $article->getPage()->getContent();
-        
+        $user = $page->getContext()->getUser();
+        $content = $page->getContent();
+
         if ( $content instanceof \MediaWiki\Content\TextContent ) {
-            $parser->parse( $content->getText(), $article->getTitle(), ParserOptions::newFromUser( $user ) );
+            $parser->parse( $content->getText(), $page->getTitle(), ParserOptions::newFromUser( $user ) );
         }
         return true;
     }

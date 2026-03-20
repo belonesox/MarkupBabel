@@ -8,6 +8,7 @@
     "description": "Renders various markup languages (LaTeX, Graphviz, Gnuplot, etc) into images, and provides GeSHi syntax highlighting.",
     "license-name": "GPL-2.0-or-later",
     "type": "parserhook",
+    "load_composer_autoloader": true,
     "requires": {
         "MediaWiki": ">= 1.39.0"
     },
